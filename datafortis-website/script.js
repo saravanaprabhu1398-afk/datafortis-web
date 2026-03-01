@@ -97,40 +97,68 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transitionDelay = `${index * 0.15}s`;
     });
 
-    // Contact Form Submission
+    // Encode form data as URL-encoded string for Netlify Forms
+    function encodeFormData(data) {
+        return Object.keys(data)
+            .map(function(key) {
+                return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
+            })
+            .join('&');
+    }
+
+    // Contact Form Submission via Netlify Forms
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-            
+            var data = {};
+            formData.forEach(function(value, key) {
+                data[key] = value;
+            });
+
+            // Ensure form-name is always present
+            data['form-name'] = 'contact';
+
             // Basic validation
             if (!data.name || !data.email || !data.service || !data.message) {
                 showNotification('Please fill in all required fields.', 'error');
                 return;
             }
-            
+
             // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(data.email)) {
                 showNotification('Please enter a valid email address.', 'error');
                 return;
             }
-            
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
+
+            var submitBtn = this.querySelector('button[type="submit"]');
+            var originalText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
-                contactForm.reset();
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: encodeFormData(data)
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
+                    contactForm.reset();
+                } else {
+                    showNotification('Something went wrong. Please try again or email us directly at info@datafortis.in', 'error');
+                }
+            })
+            .catch(function() {
+                showNotification('Something went wrong. Please try again or email us directly at info@datafortis.in', 'error');
+            })
+            .finally(function() {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            }, 1500);
+            });
         });
     }
 

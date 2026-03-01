@@ -49,7 +49,11 @@
                 <div class="contact-form-wrapper">
                     <h2>Get in Touch</h2>
                     <p>Fill out the form below and we'll get back to you within 24 hours.</p>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" name="contact" method="POST" action="/contact.html" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden" style="display:none;">
+                            <label>Don't fill this out: <input name="bot-field"></label>
+                        </p>
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required placeholder="John Doe">
