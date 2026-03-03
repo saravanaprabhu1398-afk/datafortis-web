@@ -255,5 +255,100 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     console.log('DataFortis website initialized');
+    
+    // ===================================
+    // Dashboard Tabs Functionality
+    // ===================================
+    const dashTabs = document.querySelectorAll('.dash-tab');
+    const dashPanels = document.querySelectorAll('.dashboard-panel');
+    
+    if (dashTabs.length > 0) {
+        dashTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const dashboard = this.getAttribute('data-dashboard');
+                
+                // Remove active class from all tabs and panels
+                dashTabs.forEach(t => t.classList.remove('active'));
+                dashPanels.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding panel
+                this.classList.add('active');
+                document.getElementById(dashboard).classList.add('active');
+            });
+        });
+    }
+    
+    // ===================================
+    // Recommendation System Demo
+    // ===================================
+    const recommendationData = {
+        user1: {
+            name: "Tech Enthusiast",
+            items: [
+                { name: "MacBook Pro M3", category: "Electronics", price: "$2,499", score: 95 },
+                { name: "Sony WH-1000XM5", category: "Audio", price: "$399", score: 92 },
+                { name: "iPad Pro 12.9", category: "Tablets", price: "$1,099", score: 89 },
+                { name: "Samsung 65\" OLED", category: "TVs", price: "$1,799", score: 86 }
+            ]
+        },
+        user2: {
+            name: "Budget Shopper",
+            items: [
+                { name: "Samsung Galaxy A54", category: "Phones", price: "$449", score: 94 },
+                { name: "Fire TV Stick 4K", category: "Streaming", price: "$40", score: 91 },
+                { name: "AirPods 2nd Gen", category: "Audio", price: "$129", score: 88 },
+                { name: "Insignia 50\" TV", category: "TVs", price: "$280", score: 85 }
+            ]
+        },
+        user3: {
+            name: "Premium Buyer",
+            items: [
+                { name: "Rolex Submariner", category: "Watches", price: "$14,500", score: 98 },
+                { name: "Hermès Scarf", category: "Fashion", price: "$495", score: 95 },
+                { name: "Louis Vuitton Bag", category: "Fashion", price: "$2,890", score: 93 },
+                { name: "Tesla Model S", category: "Cars", price: "$89,990", score: 90 }
+            ]
+        }
+    };
+    
+    const userButtons = document.querySelectorAll('.user-btn');
+    const recItemsContainer = document.getElementById('recItems');
+    
+    function renderRecommendations(userKey) {
+        const data = recommendationData[userKey];
+        if (!data || !recItemsContainer) return;
+        
+        recItemsContainer.innerHTML = data.items.map(item => `
+            <div class="rec-item">
+                <div class="rec-item-img">
+                    <i class="fas fa-box"></i>
+                </div>
+                <div class="rec-item-info">
+                    <h5>${item.name}</h5>
+                    <p>${item.category} • ${item.price}</p>
+                </div>
+                <span class="rec-item-score">${item.score}%</span>
+            </div>
+        `).join('');
+    }
+    
+    if (userButtons.length > 0) {
+        // Initial render
+        renderRecommendations('user1');
+        
+        // Add click handlers
+        userButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const userKey = this.getAttribute('data-user');
+                
+                // Update active state
+                userButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Render recommendations
+                renderRecommendations(userKey);
+            });
+        });
+    }
 });
 

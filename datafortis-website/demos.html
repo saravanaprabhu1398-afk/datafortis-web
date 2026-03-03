@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Demos - DataFortis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="DataFortis" class="logo-img">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                    <li><a href="demos.html" class="nav-link active">Demos</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="contact.html" class="nav-cta">Schedule a Call</a>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header demo-header">
+        <div class="container">
+            <h1>Interactive Demos</h1>
+            <p>Experience our Revenue Intelligence Platform in action</p>
+        </div>
+    </section>
+
+    <!-- Demo Navigation -->
+    <section class="demo-nav">
+        <div class="container">
+            <div class="demo-nav-grid">
+                <a href="#revenue-engine" class="demo-nav-item active">
+                    <i class="fas fa-rocket"></i>
+                    <span>Revenue Engine</span>
+                </a>
+                <a href="#customer-segmentation" class="demo-nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>AI Segmentation</span>
+                </a>
+                <a href="#control-tower" class="demo-nav-item">
+                    <i class="fas fa-tower-cell"></i>
+                    <span>Control Tower</span>
+                </a>
+                <a href="#what-if" class="demo-nav-item">
+                    <i class="fas fa-flask"></i>
+                    <span>What-If Simulator</span>
+                </a>
+                <a href="#insights" class="demo-nav-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>AI Insights</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Impact Recommendation Engine -->
+    <section id="revenue-engine" class="demo-section">
+        <div class="container">
+            <div class="demo-header-content">
+                <div class="demo-badge"><i class="fas fa-rocket"></i> Revenue Impact Engine</div>
+                <h2>Not Just Recommendations. Revenue Optimization.</h2>
+                <p>Our AI doesn't just show "customers also bought" - it predicts revenue impact and optimizes for business outcomes.</p>
+            </div>
+            
+            <div class="revenue-demo-grid">
+                <div class="revenue-explanation">
+                    <h3>What Makes Us Different?</h3>
+                    <div class="diff-cards">
+                        <div class="diff-card">
+                            <i class="fas fa-times-circle"></i>
+                            <h4>Traditional</h4>
+                            <p>"Customers who bought this also bought..."</p>
+                        </div>
+                        <div class="diff-card highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>DataFortis</h4>
+                            <p>"This bundle increases AOV by 12%. Recommended for Segment A."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="revenue-demo-panel">
+                    <div class="panel-header">
+                        <span><i class="fas fa-chart-line"></i> Live Recommendation Engine</span>
+                        <span class="live-indicator"><span class="pulse"></span> Live</span>
+                    </div>
+                    
+                    <div class="customer-context">
+                        <div class="context-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="context-info">
+                            <h4>Customer: Rahul S.</h4>
+                            <p>High-Value Customer • 3 Previous Purchases • ₹45,000 LTV</p>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-output">
+                        <h4><i class="fas fa-magic"></i> AI Recommendations</h4>
+                        
+                        <div class="rec-option">
+                            <div class="rec-option-header">
+                                <span class="rec-type">Bundle Recommendation</span>
+                                <span class="rec-impact positive">+12% AOV</span>
+                            </div>
+                            <div class="rec-products">
+                                <span class="product-tag">Laptop + Mouse + Bag</span>
+                                <span class="product-tag">Save ₹2,400</span>
+                            </div>
+                            <p class="rec-reason">Customer browsed Electronics 5x in last week. Bundle increases basket size.</p>
+                        </div>
+                        
+                        <div class="rec-option">
+                            <div class="rec-option-header">
+                                <span class="rec-type">Discount Sensitivity</span>
+                                <span class="rec-impact positive">+15% Conversion</span>
+                            </div>
+                            <div class="rec-products">
+                                <span class="product-tag">10% OFF on 2+ Items</span>
+                            </div>
+                            <p class="rec-reason">Segment analysis: Discount-sensitive buyer. 10% triggers purchase.</p>
+                        </div>
+                        
+                        <div class="rec-option">
+                            <div class="rec-option-header">
+                                <span class="rec-type">Cross-Sell Opportunity</span>
+                                <span class="rec-impact positive">+28% Repeat Rate</span>
+                            </div>
+                            <div class="rec-products">
+                                <span class="product-tag">Warranty Extension</span>
+                                <span class="product-tag">+₹1,500</span>
+                            </div>
+                            <p class="rec-reason">High-value electronics buyer. Warranty increases repeat purchase by 28%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="revenue-projection">
+                        <h4>Projected Impact</h4>
+                        <div class="projection-stats">
+                            <div class="proj-stat">
+                                <span class="proj-value">₹12,400</span>
+                                <span class="proj-label">Additional Revenue</span>
+                            </div>
+                            <div class="proj-stat">
+                                <span class="proj-value">34%</span>
+                                <span class="proj-label">Conversion Lift</span>
+                            </div>
+                            <div class="proj-stat">
+                                <span class="proj-value">2.8x</span>
+                                <span class="proj-label">ROI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI-Driven Customer Segmentation -->
+    <section id="customer-segmentation" class="demo-section alt-bg">
+        <div class="container">
+            <div class="demo-header-content">
+                <div class="demo-badge"><i class="fas fa-users"></i> AI-Driven Customer Segmentation</div>
+                <h2>Beyond RFM. Intelligent Auto-Segmentation.</h2>
+                <p>Our ML models automatically classify customers based on behavior patterns, predicting future actions.</p>
+            </div>
+            
+            <div class="segmentation-demo">
+                <div class="segment-tabs">
+                    <button class="seg-tab active" data-seg="all">All Segments</button>
+                    <button class="seg-tab" data-seg="highltv">High LTV</button>
+                    <button class="seg-tab" data-seg="churn">Churn Risk</button>
+                    <button class="seg-tab" data-seg="discount">Discount Sensitive</button>
+                    <button class="seg-tab" data-seg="premium">Premium</button>
+                </div>
+                
+                <div class="segment-cards">
+                    <div class="segment-card" data-seg="highltv">
+                        <div class="seg-header">
+                            <div class="seg-icon highltv"><i class="fas fa-crown"></i></div>
+                            <div class="seg-title">
+                                <h4>High LTV Customers</h4>
+                                <span class="seg-count">2,847 customers</span>
+                            </div>
+                            <span class="seg-value">₹4.2L avg spend</span>
+                        </div>
+                        <div class="seg-characteristics">
+                            <h5>Key Characteristics</h5>
+                            <div class="char-tags">
+                                <span class="char-tag">Premium Products</span>
+                                <span class="char-tag">No Discounts</span>
+                                <span class="char-tag">Fast Checkout</span>
+                                <span class="char-tag">Monthly Buyer</span>
+                            </div>
+                        </div>
+                        <div class="seg-actions">
+                            <button class="seg-action-btn">Target with Premium Offers</button>
+                        </div>
+                    </div>
+                    
+                    <div class="segment-card" data-seg="churn">
+                        <div class="seg-header">
+                            <div class="seg-icon churn"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="seg-title">
+                                <h4>Churn Risk</h4>
+                                <span class="seg-count">1,203 customers</span>
+                            </div>
+                            <span class="seg-value">67% probability</span>
+                        </div>
+                        <div class="seg-characteristics">
+                            <h5>Key Characteristics</h5>
+                            <div class="char-tags">
+                                <span class="char-tag">No Activity 45+ days</span>
+                                <span class="char-tag">Support Tickets</span>
+                                <span class="char-tag">Cart Abandonment</span>
+                                <span class="char-tag">Downgraded Plan</span>
+                            </div>
+                        </div>
+                        <div class="seg-actions">
+                            <button class="seg-action-btn churn-btn">Send Win-Back Campaign</button>
+                        </div>
+                    </div>
+                    
+                    <div class="segment-card" data-seg="discount">
+                        <div class="seg-header">
+                            <div class="seg-icon discount"><i class="fas fa-percent"></i></div>
+                            <div class="seg-title">
+                                <h4>Discount Sensitive</h4>
+                                <span class="seg-count">5,621 customers</span>
+                            </div>
+                            <span class="seg-value">89% convert on sale</span>
+                        </div>
+                        <div class="seg-characteristics">
+                            <h5>Key Characteristics</h5>
+                            <div class="char-tags">
+                                <span class="char-tag">Wait for Sales</span>
+                                <span class="char-tag">Price Comparison</span>
+                                <span class="char-tag">Use Coupons</span>
+                                <span class="char-tag">Bulk Buyers</span>
+                            </div>
+                        </div>
+                        <div class="seg-actions">
+                            <button class="seg-action-btn">Target with Flash Sales</button>
+                        </div>
+                    </div>
+                    
+                    <div class="segment-card" data-seg="premium">
+                        <div class="seg-header">
+                            <div class="seg-icon premium"><i class="fas fa-gem"></i></div>
+                            <div class="seg-title">
+                                <h4>Premium Buyers</h4>
+                                <span class="seg-count">892 customers</span>
+                            </div>
+                            <span class="seg-value">₹8.5L avg spend</span>
+                        </div>
+                        <div class="seg-characteristics">
+                            <h5>Key Characteristics</h5>
+                            <div class="char-tags">
+                                <span class="char-tag">Luxury Products</span>
+                                <span class="char-tag">VIP Support</span>
+                                <span class="char-tag">Early Access</span>
+                                <span class="char-tag">Personal Shopper</span>
+                            </div>
+                        </div>
+                        <div class="seg-actions">
+                            <button class="seg-action-btn premium-btn">Exclusive Early Access</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decision Dashboard / Control Tower -->
+    <section id="control-tower" class="demo-section">
+        <div class="container">
+            <div class="demo-header-content">
+                <div class="demo-badge"><i class="fas fa-tower-cell"></i> Decision Dashboard</div>
+                <h2>Business Control Tower</h2>
+                <p>Not just charts. Actionable alerts with root cause analysis and recommended actions.</p>
+            </div>
+            
+            <div class="control-tower-demo">
+                <div class="alerts-feed">
+                    <h3><i class="fas fa-bell"></i> Live Alerts</h3>
+                    
+                    <div class="alert-item critical">
+                        <div class="alert-icon"><i class="fas fa-arrow-down"></i></div>
+                        <div class="alert-content">
+                            <span class="alert-title">Conversion Drop Detected</span>
+                            <p>Checkout conversion dropped 23% in last 2 hours</p>
+                            <span class="alert-action"><i class="fas fa-flask"></i> Test: Simplify payment options</span>
+                        </div>
+                        <span class="alert-time">2 min ago</span>
+                    </div>
+                    
+                    <div class="alert-item success">
+                        <div class="alert-icon"><i class="fas fa-arrow-up"></i></div>
+                        <div class="alert-content">
+                            <span class="alert-title">Upsell Opportunity</span>
+                            <p>Premium bundle performing 3x better with Gen-Z segment</p>
+                            <span class="alert-action"><i class="fas fa-rocket"></i> Action: Scale to all Gen-Z</span>
+                        </div>
+                        <span class="alert-time">15 min ago</span>
+                    </div>
+                    
+                    <div class="alert-item warning">
+                        <div class="alert-icon"><i class="fas fa-exclamation-circle"></i></div>
+                        <div class="alert-content">
+                            <span class="alert-title">Churn Risk Spike</span>
+                            <p>1,247 customers showing churn signals today</p>
+                            <span class="alert-action"><i class="fas fa-envelope"></i> Action: Launch retention campaign</span>
+                        </div>
+                        <span class="alert-time">1 hr ago</span>
+                    </div>
+                    
+                    <div class="alert-item info">
+                        <div class="alert-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="alert-content">
+                            <span class="alert-title">Revenue Insight</span>
+                            <p>Weekend promotions drove 40% of this month's revenue</p>
+                            <span class="alert-action"><i class="fas fa-calendar"></i> Recommend: Extend weekend hours</span>
+                        </div>
+                        <span class="alert-time">3 hrs ago</span>
+                    </div>
+                </div>
+                
+                <div class="metrics-overview">
+                    <h3><i class="fas fa-chart-pie"></i> Today's Metrics</h3>
+                    
+                    <div class="control-metrics">
+                        <div class="control-metric positive">
+                            <div class="metric-header">
+                                <span>Revenue</span>
+                                <span class="metric-trend up">+18%</span>
+                            </div>
+                            <span class="metric-value">₹24.5L</span>
+                            <span class="metric-target">Target: ₹20L</span>
+                        </div>
+                        
+                        <div class="control-metric warning">
+                            <div class="metric-header">
+                                <span>Cart Abandonment</span>
+                                <span class="metric-trend up">+5%</span>
+                            </div>
+                            <span class="metric-value">72%</span>
+                            <span class="metric-target">Target: <65%</span>
+                        </div>
+                        
+                        <div class="control-metric positive">
+                            <div class="metric-header">
+                                <span>Conversion Rate</span>
+                                <span class="metric-trend up">+12%</span>
+                            </div>
+                            <span class="metric-value">4.2%</span>
+                            <span class="metric-target">Target: 3.5%</span>
+                        </div>
+                        
+                        <div class="control-metric negative">
+                            <div class="metric-header">
+                                <span>Support Tickets</span>
+                                <span class="metric-trend down">+15%</span>
+                            </div>
+                            <span class="metric-value">156</span>
+                            <span class="metric-target">Target: <100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What-If Simulator -->
+    <section id="what-if" class="demo-section alt-bg">
+        <div class="container">
+            <div class="demo-header-content">
+                <div class="demo-badge"><i class="fas fa-flask"></i> What-If Simulator</div>
+                <h2>Predict Revenue Impact Before You Act</h2>
+                <p>Test different strategies and see projected outcomes. Make data-backed decisions with confidence.</p>
+            </div>
+            
+            <div class="simulator-demo">
+                <div class="simulator-controls">
+                    <h3><i class="fas fa-sliders-h"></i> Configure Scenario</h3>
+                    
+                    <div class="control-group">
+                        <label>Strategy Type</label>
+                        <select id="strategyType">
+                            <option value="discount">Discount Offer</option>
+                            <option value="bundle">Product Bundle</option>
+                            <option value="email">Email Campaign</option>
+                            <option value="ads">Ad Spend</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Target Segment</label>
+                        <select id="targetSegment">
+                            <option value="all">All Customers</option>
+                            <option value="highltv">High LTV</option>
+                            <option value="churn">At-Risk</option>
+                            <option value="new">New Customers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Investment Level</label>
+                        <input type="range" id="investmentLevel" min="10000" max="500000" value="100000" step="10000">
+                        <span class="range-value">₹<span id="investmentDisplay">1,00,000</span></span>
+                    </div>
+                    
+                    <button class="simulate-btn" onclick="runSimulation()">
+                        <i class="fas fa-play"></i> Run Simulation
+                    </button>
+                </div>
+                
+                <div class="simulator-results" id="simResults">
+                    <h3><i class="fas fa-chart-bar"></i> Projected Results</h3>
+                    
+                    <div class="result-card">
+                        <div class="result-header">
+                            <span>Revenue Impact</span>
+                            <span class="result-positive">+₹4.2L</span>
+                        </div>
+                        <div class="result-bar">
+                            <div class="result-fill" style="width: 0%" id="revenueBar"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-header">
+                            <span>Conversion Lift</span>
+                            <span class="result-positive">+23%</span>
+                        </div>
+                        <div class="result-bar">
+                            <div class="result-fill" style="width: 0%" id="conversionBar"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-header">
+                            <span>Customer Acquisition</span>
+                            <span class="result-positive">+847</span>
+                        </div>
+                        <div class="result-bar">
+                            <div class="result-fill" style="width: 0%" id="acquisitionBar"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="roi-calculation">
+                        <div class="roi-item">
+                            <span>Investment</span>
+                            <span class="roi-value">₹1,00,000</span>
+                        </div>
+                        <div class="roi-item">
+                            <span>Expected Return</span>
+                            <span class="roi-value positive">₹4,20,000</span>
+                        </div>
+                        <div class="roi-item total">
+                            <span>Net ROI</span>
+                            <span class="roi-value positive">320%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Insight Summarizer -->
+    <section id="insights" class="demo-section">
+        <div class="container">
+            <div class="demo-header-content">
+                <div class="demo-badge"><i class="fas fa-lightbulb"></i> AI Insight Summarizer</div>
+                <h2>Auto-Generated Business Insights</h2>
+                <p>Natural language insights that anyone can understand. No data science degree required.</p>
+            </div>
+            
+            <div class="insights-demo">
+                <div class="insights-list">
+                    <div class="insight-card">
+                        <div class="insight-icon positive"><i class="fas fa-arrow-up"></i></div>
+                        <div class="insight-content">
+                            <span class="insight-metric">Repeat purchases increased <strong>8%</strong> in last 30 days</span>
+                            <p class="insight-reason">Driven by the new bundled offer strategy launched in January</p>
+                            <span class="insight-impact">Impact: +₹12L revenue</span>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-card">
+                        <div class="insight-icon warning"><i class="fas fa-arrow-down"></i></div>
+                        <div class="insight-content">
+                            <span class="insight-metric">Mobile conversion <strong>40% lower</strong> than desktop</span>
+                            <p class="insight-reason">Checkout page load time 3s slower on mobile</p>
+                            <span class="insight-impact">Potential: +₹8L with fix</span>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-card">
+                        <div class="insight-icon positive"><i class="fas fa-star"></i></div>
+                        <div class="insight-content">
+                            <span class="insight-metric">Product reviews with images have <strong>65%</strong> higher conversion</span>
+                            <p class="insight-reason">Visual social proof drives purchase decisions</p>
+                            <span class="insight-impact">Action: Encourage photo reviews</span>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-card">
+                        <div class="insight-icon info"><i class="fas fa-clock"></i></div>
+                        <div class="insight-content">
+                            <span class="insight-metric">Peak shopping: <strong>8-10 PM</strong> on weekdays</span>
+                            <p class="insight-reason">Evening hours show 3x higher engagement</p>
+                            <span class="insight-impact">Recommendation: Schedule promos at 8 PM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insight-generator">
+                    <h3><i class="fas fa-robot"></i> Ask AI Insights</h3>
+                    <div class="query-box">
+                        <input type="text" placeholder="Ask any question about your data..." id="insightQuery">
+                        <button onclick="generateInsight()"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="sample-queries">
+                        <span>Try:</span>
+                        <button onclick="setQuery('Why did sales drop yesterday?')">Why did sales drop yesterday?</button>
+                        <button onclick="setQuery('What products should I discount?')">What products should I discount?</button>
+                        <button onclick="setQuery('How can I improve retention?')">How can I improve retention?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Revenue Intelligence?</h2>
+            <p>Schedule a personalized demo to see how our platform can drive measurable revenue growth for your business.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button cta-large">Book a Live Demo</a>
+                <a href="contact.html" class="cta-button-outline-white">Talk to an Expert</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="logo.png" alt="DataFortis" class="logo-img">
+                    </a>
+                    <p>Engineering strong foundations for modern data platforms. We help enterprises build scalable, real-time data infrastructure.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Data Architecture</a></li>
+                        <li><a href="services.html">CDC Implementation</a></li>
+                        <li><a href="services.html">Analytics Engineering</a></li>
+                        <li><a href="services.html">Cloud Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="solutions.html">Azure Data Platform</a></li>
+                        <li><a href="solutions.html">AWS Data Lake</a></li>
+                        <li><a href="solutions.html">Snowflake Integration</a></li>
+                        <li><a href="solutions.html">Real-time Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@datafortis.in</li>
+                        <li><i class="fas fa-phone"></i> +91 04447988419</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DataFortis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Investment slider
+        document.getElementById('investmentLevel').addEventListener('input', function() {
+            document.getElementById('investmentDisplay').textContent = parseInt(this.value).toLocaleString('en-IN');
+        });
+        
+        // Simulation function
+        function runSimulation() {
+            const revenueBar = document.getElementById('revenueBar');
+            const conversionBar = document.getElementById('conversionBar');
+            const acquisitionBar = document.getElementById('acquisitionBar');
+            
+            // Reset and animate
+            [revenueBar, conversionBar, acquisitionBar].forEach(bar => {
+                bar.style.width = '0%';
+            });
+            
+            setTimeout(() => {
+                revenueBar.style.width = '85%';
+                conversionBar.style.width = '70%';
+                acquisitionBar.style.width = '60%';
+            }, 100);
+        }
+        
+        // Insight query
+        function setQuery(query) {
+            document.getElementById('insightQuery').value = query;
+        }
+        
+        function generateInsight() {
+            alert('This would connect to our AI to generate insights based on your data. Schedule a demo to see it in action!');
+        }
+        
+        // Demo navigation
+        document.querySelectorAll('.demo-nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                document.querySelectorAll('.demo-nav-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        // Segment tabs
+        document.querySelectorAll('.seg-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const seg = this.getAttribute('data-seg');
+                document.querySelectorAll('.seg-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                document.querySelectorAll('.segment-card').forEach(card => {
+                    if (seg === 'all' || card.getAttribute('data-seg') === seg) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

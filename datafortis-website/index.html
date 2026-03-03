@@ -22,9 +22,9 @@
                     <li><a href="index.html" class="nav-link active">Home</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
                     <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                    <li><a href="demos.html" class="nav-link">Demos</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
             </div>
             <div class="nav-right">
                 <a href="contact.html" class="nav-cta">Schedule a Call</a>
@@ -190,6 +190,250 @@
                         <div class="why-icon"><i class="fas fa-headset"></i></div>
                         <h4>24/7 Support</h4>
                         <p>Dedicated support team available round the clock</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Dashboards Section -->
+    <section class="demo-dashboards">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive Demo Dashboards</h2>
+                <p>Experience real-time data visualization powered by modern data platforms</p>
+            </div>
+            
+            <!-- Dashboard Tabs -->
+            <div class="dashboard-tabs">
+                <button class="dash-tab active" data-dashboard="sales">Sales Analytics</button>
+                <button class="dash-tab" data-dashboard="realtime">Real-Time Monitoring</button>
+                <button class="dash-tab" data-dashboard="ml">ML Predictions</button>
+            </div>
+            
+            <!-- Dashboard Panels -->
+            <div class="dashboard-panel active" id="sales">
+                <div class="dash-preview">
+                    <div class="dash-header">
+                        <span><i class="fas fa-chart-bar"></i> Sales Performance Dashboard</span>
+                        <span class="dash-source">Powered by Snowflake + Power BI</span>
+                    </div>
+                    <div class="dash-metrics">
+                        <div class="dash-metric">
+                            <span class="metric-value">$2.4M</span>
+                            <span class="metric-label">Total Revenue</span>
+                            <span class="metric-change positive"><i class="fas fa-arrow-up"></i> 12%</span>
+                        </div>
+                        <div class="dash-metric">
+                            <span class="metric-value">1,847</span>
+                            <span class="metric-label">Orders</span>
+                            <span class="metric-change positive"><i class="fas fa-arrow-up"></i> 8%</span>
+                        </div>
+                        <div class="dash-metric">
+                            <span class="metric-value">$1,299</span>
+                            <span class="metric-label">Avg Order Value</span>
+                            <span class="metric-change positive"><i class="fas fa-arrow-up"></i> 4%</span>
+                        </div>
+                        <div class="dash-metric">
+                            <span class="metric-value">94%</span>
+                            <span class="metric-label">Customer Satisfaction</span>
+                            <span class="metric-change positive"><i class="fas fa-arrow-up"></i> 2%</span>
+                        </div>
+                    </div>
+                    <div class="dash-chart">
+                        <div class="chart-bars">
+                            <div class="bar" style="height: 60%" data-month="Jan"><span>60%</span></div>
+                            <div class="bar" style="height: 75%" data-month="Feb"><span>75%</span></div>
+                            <div class="bar" style="height: 45%" data-month="Mar"><span>45%</span></div>
+                            <div class="bar" style="height: 90%" data-month="Apr"><span>90%</span></div>
+                            <div class="bar" style="height: 70%" data-month="May"><span>70%</span></div>
+                            <div class="bar" style="height: 85%" data-month="Jun"><span>85%</span></div>
+                        </div>
+                        <div class="chart-labels">
+                            <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-panel" id="realtime">
+                <div class="dash-preview">
+                    <div class="dash-header">
+                        <span><i class="fas fa-bolt"></i> Real-Time Infrastructure Monitoring</span>
+                        <span class="dash-source">Powered by Kafka + Databricks</span>
+                    </div>
+                    <div class="dash-metrics">
+                        <div class="dash-metric">
+                            <span class="metric-value">99.99%</span>
+                            <span class="metric-label">System Uptime</span>
+                            <span class="metric-change positive"><i class="fas fa-check"></i> Healthy</span>
+                        </div>
+                        <div class="dash-metric">
+                            <span class="metric-value">12.4K</span>
+                            <span class="metric-label">Events/sec</span>
+                            <span class="metric-change positive"><i class="fas fa-arrow-up"></i> Normal</span>
+                        </div>
+                        <div class="dash-metric">
+                            <span class="metric-value">23ms</span>
+                            <span class="metric-label">Avg Latency</span>
+                            <span class="metric-change positive"><i class="fas fa-arrow-down"></i> -5ms</span>
+                        </div>
+                        <div class="dash-metric">
+                            <span class="metric-value">8</span>
+                            <span class="metric-label">Active Nodes</span>
+                            <span class="metric-change positive"><i class="fas fa-server"></i> Running</span>
+                        </div>
+                    </div>
+                    <div class="dash-chart realtime-chart">
+                        <div class="realtime-line">
+                            <svg viewBox="0 0 500 100" preserveAspectRatio="none">
+                                <polyline fill="none" stroke="#06b6d4" stroke-width="2" points="0,50 50,45 100,55 150,40 200,60 250,35 300,45 350,50 400,40 450,55 500,45"/>
+                            </svg>
+                        </div>
+                        <div class="realtime-legend">
+                            <span><i class="fas fa-circle" style="color: #06b6d4"></i> Throughput</span>
+                            <span><i class="fas fa-circle" style="color: #2563eb"></i> Latency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-panel" id="ml">
+                <div class="dash-preview">
+                    <div class="dash-header">
+                        <span><i class="fas fa-brain"></i> ML Model Predictions</span>
+                        <span class="dash-source">Powered by Databricks + MLflow</span>
+                    </div>
+                    <div class="dash-metrics">
+                        <div class="dash-metric">
+                            <span class="metric-value">94.2%</span>
+                            <span class="metric-label">Model Accuracy</span>
+                            <span class="metric-change positive"><i class="fas fa-arrow-up"></i> 1.2%</span>
+                        </div>
+                        <div class="dash-metric">
+                            <span class="metric-value">15.2K</span>
+                            <span class="metric-label">Predictions Today</span>
+                            <span class="metric-change positive"><i class="fas fa-robot"></i> Active</span>
+                        </div>
+                        <div class="dash-metric">
+                            <span class="metric-value">0.87</span>
+                            <span class="metric-label">AUC Score</span>
+                            <span class="metric-change positive"><i class="fas fa-check-circle"></i> Excellent</span>
+                        </div>
+                        <div class="dash-metric">
+                            <span class="metric-value">3</span>
+                            <span class="metric-label">Models Deployed</span>
+                            <span class="metric-change positive"><i class="fas fa-rocket"></i> Production</span>
+                        </div>
+                    </div>
+                    <div class="dash-chart ml-chart">
+                        <div class="prediction-bars">
+                            <div class="pred-item">
+                                <span class="pred-label">Churn Prediction</span>
+                                <div class="pred-bar"><div class="pred-fill" style="width: 87%"></div></div>
+                                <span class="pred-value">87%</span>
+                            </div>
+                            <div class="pred-item">
+                                <span class="pred-label">Demand Forecast</span>
+                                <div class="pred-bar"><div class="pred-fill" style="width: 92%"></div></div>
+                                <span class="pred-value">92%</span>
+                            </div>
+                            <div class="pred-item">
+                                <span class="pred-label">Fraud Detection</span>
+                                <div class="pred-bar"><div class="pred-fill" style="width: 98%"></div></div>
+                                <span class="pred-value">98%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-cta">
+                <p>Want a personalized demo for your specific use case?</p>
+                <a href="contact.html" class="cta-button">Schedule a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation System Demo Section -->
+    <section class="recommendation-demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recommendation System Demo</h2>
+                <p>See how our ML-powered recommendation engine drives engagement and revenue</p>
+            </div>
+            
+            <div class="rec-demo-wrapper">
+                <div class="rec-explanation">
+                    <h3>How It Works</h3>
+                    <div class="rec-steps">
+                        <div class="rec-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Data Collection</h4>
+                                <p>Collect user behavior data - views, clicks, purchases, ratings</p>
+                            </div>
+                        </div>
+                        <div class="rec-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Feature Engineering</h4>
+                                <p>Build user and item features using Spark and Databricks</p>
+                            </div>
+                        </div>
+                        <div class="rec-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Model Training</h4>
+                                <p>Train collaborative filtering or deep learning models</p>
+                            </div>
+                        </div>
+                        <div class="rec-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Real-Time Inference</h4>
+                                <p>Serve predictions via API with sub-100ms latency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rec-interactive">
+                    <h3>Try It Live</h3>
+                    <p class="rec-subtitle">Select a user profile to see personalized recommendations</p>
+                    
+                    <div class="user-profiles">
+                        <button class="user-btn active" data-user="user1">
+                            <i class="fas fa-user"></i> Tech Enthusiast
+                        </button>
+                        <button class="user-btn" data-user="user2">
+                            <i class="fas fa-user"></i> Budget Shopper
+                        </button>
+                        <button class="user-btn" data-user="user3">
+                            <i class="fas fa-user"></i> Premium Buyer
+                        </button>
+                    </div>
+                    
+                    <div class="rec-results">
+                        <h4>Recommended For You</h4>
+                        <div class="rec-items" id="recItems">
+                            <!-- Items will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="rec-stats">
+                        <div class="rec-stat">
+                            <span class="rec-stat-value">35%</span>
+                            <span class="rec-stat-label">Conversion Lift</span>
+                        </div>
+                        <div class="rec-stat">
+                            <span class="rec-stat-value">2.8x</span>
+                            <span class="rec-stat-label">Click-through Rate</span>
+                        </div>
+                        <div class="rec-stat">
+                            <span class="rec-stat-value">$1.2M</span>
+                            <span class="rec-stat-label">Monthly Revenue</span>
+                        </div>
                     </div>
                 </div>
             </div>
