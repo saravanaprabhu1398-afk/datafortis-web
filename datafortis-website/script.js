@@ -97,68 +97,64 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transitionDelay = `${index * 0.15}s`;
     });
 
-    // Encode form data as URL-encoded string for Netlify Forms
-    function encodeFormData(data) {
-        return Object.keys(data)
-            .map(function(key) {
-                return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
-            })
-            .join('&');
-    }
-
-    // Contact Form Submission via Netlify Forms
+    // Contact Form Submission via Formspree
     const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+    
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-
+            
             const formData = new FormData(this);
-            var data = {};
-            formData.forEach(function(value, key) {
-                data[key] = value;
-            });
-
-            // Ensure form-name is always present
-            data['form-name'] = 'contact';
-
+            const data = Object.fromEntries(formData.entries());
+            
             // Basic validation
             if (!data.name || !data.email || !data.service || !data.message) {
-                showNotification('Please fill in all required fields.', 'error');
+                formStatus.textContent = 'Please fill in all required fields.';
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
                 return;
             }
-
+            
             // Email validation
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(data.email)) {
-                showNotification('Please enter a valid email address.', 'error');
+                formStatus.textContent = 'Please enter a valid email address.';
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
                 return;
             }
-
-            var submitBtn = this.querySelector('button[type="submit"]');
-            var originalText = submitBtn.textContent;
+            
+            // Change button text while sending
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: encodeFormData(data)
-            })
-            .then(function(response) {
+            
+            try {
+                const response = await fetch('https://formspree.io/f/meelwpky', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
                 if (response.ok) {
-                    showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
+                    formStatus.textContent = 'Thank you! Your message has been sent successfully. We will get back to you within 24 hours.';
+                    formStatus.className = 'form-status success';
+                    formStatus.style.display = 'block';
                     contactForm.reset();
                 } else {
-                    showNotification('Something went wrong. Please try again or email us directly at info@datafortis.in', 'error');
+                    throw new Error('Form submission failed');
                 }
-            })
-            .catch(function() {
-                showNotification('Something went wrong. Please try again or email us directly at info@datafortis.in', 'error');
-            })
-            .finally(function() {
-                submitBtn.textContent = originalText;
+            } catch (error) {
+                formStatus.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly at info@datafortis.in';
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
+            } finally {
+                submitBtn.textContent = 'Send Message';
                 submitBtn.disabled = false;
-            });
+            }
         });
     }
 

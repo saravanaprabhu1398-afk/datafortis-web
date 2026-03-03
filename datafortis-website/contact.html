@@ -49,18 +49,16 @@
                 <div class="contact-form-wrapper">
                     <h2>Get in Touch</h2>
                     <p>Fill out the form below and we'll get back to you within 24 hours.</p>
-                    <form class="contact-form" id="contactForm" name="contact" method="POST" action="/contact.html" data-netlify="true" data-netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="contact">
-                        <p class="hidden" style="display:none;">
-                            <label>Don't fill this out: <input name="bot-field"></label>
-                        </p>
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwzgvrl" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - DataFortis">
+                        <input type="text" name="_gotcha" style="display:none">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
                         </div>
                         <div class="form-group">
                             <label for="email">Work Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="john@company.com">
+                            <input type="email" id="email" name="email" required placeholder="you@company.com">
                         </div>
                         <div class="form-group">
                             <label for="company">Company Name</label>
@@ -68,25 +66,26 @@
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                            <input type="tel" id="phone" name="phone" placeholder="+91 0000000000">
                         </div>
                         <div class="form-group">
                             <label for="service">Service Interest *</label>
                             <select id="service" name="service" required>
                                 <option value="">Select a service</option>
-                                <option value="architecture">Data Infrastructure Architecture</option>
-                                <option value="cdc">Real-Time CDC Implementation</option>
-                                <option value="analytics">Analytics Engineering</option>
-                                <option value="optimization">Azure Cost Optimization</option>
-                                <option value="migration">Cloud Migration</option>
-                                <option value="other">Other</option>
+                                <option value="Data Infrastructure Architecture">Data Infrastructure Architecture</option>
+                                <option value="Real-Time CDC Implementation">Real-Time CDC Implementation</option>
+                                <option value="Analytics Engineering">Analytics Engineering</option>
+                                <option value="Azure Cost Optimization">Azure Cost Optimization</option>
+                                <option value="Cloud Migration">Cloud Migration</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Message *</label>
                             <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or requirements..."></textarea>
                         </div>
-                        <button type="submit" class="cta-button cta-large">Send Message</button>
+                        <button type="submit" class="cta-button cta-large" id="submitBtn">Send Message</button>
+                        <div id="formStatus" class="form-status"></div>
                     </form>
                 </div>
 
